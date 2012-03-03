@@ -1,0 +1,57 @@
+/*@import url('boilerplate-base.css');*/
+/*@import url('isotope.css');*/
+/*@import url('1140.css');*/
+@import url('fonts.css');
+
+body {
+    background:white;
+    color:black;
+    font-family: 'District Thin';
+    -webkit-user-select: none;
+    margin:0px;
+    overflow-x:hidden;
+    box-sizing:border-box;
+}
+
+A {
+    text-decoration:none;
+    opacity:0.6;
+}
+
+.main {
+    width:100%;
+}
+
+#container {
+    margin-top:100px;
+    max-width:1140px;
+    min-height:800px;
+     margin-left:auto; margin-right:auto;
+}
+
+footer {
+    border-top:1px solid rgba(0,0,0,0.8);;
+    width:100%;
+    font-size:8pt;
+    color:rgba(0,0,0,0.8);
+}
+
+.article {
+    font-size:16pt;
+    overflow:hidden;
+    height:160px;
+    width:160px;
+    margin:5px;
+    padding:20px;
+    border:1px solid rgba(0,0,0,0.4);    
+}
+
+.headline_article {
+    height:400px;
+    width:400px;
+}
+.headline_article .title {
+    font-size:72pt;
+}
+.row {
+}
