@@ -2,21 +2,24 @@
 /*@import url('1140.css');*/
 @import url('fonts.css');
 /*@import url('isotope.css');*/
-
+* {
+    box-sizing:border-box;
+}
 html,
 body {
     height: 100%;
 }
 
 body {
+    padding-top:100px;
     background:white;
     color:black;
     font-family: 'District Thin';
     -webkit-user-select: none;
     margin:0px;
-    overflow-x:hidden;
-    box-sizing:border-box;
+    position:relative;    
 }
+
 
 A {
     text-decoration:none;
@@ -24,18 +27,31 @@ A {
 }
 
 #main {
-    width:100%;
-    max-width:1140px;
-    min-height:900px;
+    height:600px;
+    min-height:520px;
     margin-left:auto; margin-right:auto;
-    margin-top:100px;     
+    overflow-x: scroll;
+    border:1px solid grey;
+    position:absolute;
+    top:50%; left:0px;
+    right:0px;
+    margin-top:-300px;
 }
 
-.lhs, .rhs {   display:inline-block;  height:100%;  vertical-align: top; }
-.lhs { border:1px solid rgba(0,0,0,0.1); }
-.rhs { overflow-y:scroll; max-height:640px; }
-.selected {   }
-.stream { min-width:700px; min-height:420px; }
+.lhs, .rhs {
+    display:inline-block;  height:100%;  vertical-align: top;
+}
+.lhs {
+    padding:30px; position:absolute; left:0px; top:0px; bottom:0px; width:500px; background:rgba(230,255,255,0.9); z-index: 5;
+}
+.rhs {
+    position:absolute; left:0px; right:0px; top:0px; bottom:0px; z-index:0;
+    overflow-x:scroll; height-max:900px;
+}
+.selected {
+    border:1px solid rgba(0,0,0,0.4);
+}
+.stream { }
 
 footer {
     border-top:1px solid rgba(0,0,0,0.8);;
@@ -53,10 +69,14 @@ footer {
     padding:20px;
     border:1px solid rgba(0,0,0,0.4);    
 }
+
 .headline_article {
-    height:400px;
-    width:400px;
+    background:rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.3);    
+    height:420px;
+    width:420px;
 }
+
 .headline_article .title {
     font-size:72pt;
 }

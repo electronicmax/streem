@@ -15,7 +15,7 @@ define([],
                     this.$el.attr('uri', this.options.model.id);
                     if (!this.options.suppress_headlines && this.options.model.headline) {
                         this.$el.addClass('headline_article');
-                    }                        
+                    }
 		    var html = this.options.headline ||
                         (!this.options.suppress_headlines && this.options.model.headline) ?
                         _.template(this.headline_template)({ a: this.options.model }) : _.template(this.small_template)({ a: this.options.model});
@@ -43,7 +43,7 @@ define([],
 			    function(item) {
 				var v = new ArticleView({model: item, suppress_headlines: true});
 				this_.$el.append(v.render());
-                                v.bind('click', function() { this_._trigger('item_clicked', x); });
+                                v.bind('click', function() { this_.trigger('item_clicked', v); });
 				return v;
 			    });
                         this.$el.isotope();
@@ -97,7 +97,7 @@ define([],
                             model:this.options.selected || (this.options.collection && this.options.collection[0])
                         }
                     );
-                    this.streamview.bind('item_clicked', function(item) { this_.set_selected(item);  });
+                    this.streamview.bind('item_clicked', function(item) { this_.set_selected(item.options.model);  });
                     this.streamview.render();
                     this.selectedview.render();
                     return this.el;                    
