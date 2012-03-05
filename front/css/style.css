@@ -31,11 +31,11 @@ A {
     margin-top:100px;     
 }
 
-.lhs, .rhs {   display:inline-block;  height:100% }
-.lhs { border:1px solid blue; }
-.rhs { border:1px solid grey;}
-.selected {  border:1px solid green;  }
-.stream { border: 1px solid brown; height:500px; overflow:auto; }
+.lhs, .rhs {   display:inline-block;  height:100%;  vertical-align: top; }
+.lhs { border:1px solid rgba(0,0,0,0.1); }
+.rhs { overflow-y:scroll; max-height:640px; }
+.selected {   }
+.stream { min-width:700px; min-height:420px; }
 
 footer {
     border-top:1px solid rgba(0,0,0,0.8);;
@@ -63,10 +63,19 @@ footer {
 .row {
 }
 
+.isotope-item {
+  z-index: 2;
+}
 
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
 
 .isotope,
-.isotope .article {
+.isotope .isotope-item {
   -webkit-transition-duration: 0.8s;
      -moz-transition-duration: 0.8s;
       -ms-transition-duration: 0.8s;
@@ -82,7 +91,7 @@ footer {
           transition-property: height, width;
 }
 
-.isotope .article {
+.isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
      -moz-transition-property:    -moz-transform, opacity;
       -ms-transition-property:     -ms-transform, opacity;
@@ -93,12 +102,14 @@ footer {
 /**** disabling Isotope CSS3 transitions ****/
 
 .isotope.no-transition,
-.isotope.no-transition .article,
-.isotope .article.no-transition {
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
   -webkit-transition-duration: 0s;
      -moz-transition-duration: 0s;
       -ms-transition-duration: 0s;
        -o-transition-duration: 0s;
           transition-duration: 0s;
 }
+
+
 

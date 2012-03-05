@@ -28,8 +28,4 @@ require(
                 $container.isotope({ filter: selector });
                 return false;
             });
-
-        shv.getStreamView().apply_isotope();
-        shv.getStreamView().refresh();
-        
     });

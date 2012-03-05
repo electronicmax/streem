@@ -1,6 +1,5 @@
 define([],
     function(util) {
-        
 	var ArticleView = Backbone.View.extend(
 	    {
                 events: { "click" : "_fire_click" },
@@ -35,7 +34,7 @@ define([],
 	var StreamView = Backbone.View.extend(
 		{
 		    initialize:function() {
-                        this.mode_test = function(x) { return true; };
+                        this.set_filtered_type();
                     },
 		    render:function() {
                         this.$el.html('');
@@ -46,8 +45,8 @@ define([],
 				this_.$el.append(v.render());
                                 v.bind('click', function() { this_._trigger('item_clicked', x); });
 				return v;
-			    });			
-                        console.log('views ', this.views, this.$el, this.$el.children());
+			    });
+                        this.$el.isotope();
 			return this.el;
 		    },
                     set_filtered_type:function(type) {
@@ -55,7 +54,8 @@ define([],
                         this.mode_test = function(x){ return type == undefined || (x.type == type); };
                     },
                     _update_filtered:function() {
-                        this.views.map(function(view) { this.mode_test(view.options.model) && this_._filter(view.options.model) ? view.addClass('__keepers') : view.removeClass('__keepers'); });
+                        var this_ = this;
+                        this.views.map(function(view) { this_.mode_test(view.options.model) && this_._filter(view.options.model) ? view.$el.addClass('__keepers') : view.$el.removeClass('__keepers'); });
                         $(this.el).isotope({filter: ".__keepers"});                                                
                     },
                     set_filter:function(f) {
@@ -67,15 +67,11 @@ define([],
                         this._update_filtered();
                     },
                     set_sort:function(f) {
-                       this.$el.isotope({ getSortData:{sorder: f}, sortBy: 'sorder' });
+                       // this.$el.isotope({ getSortData:{sorder: f}, sortBy: 'sorder' });
                     },
                     refresh:function() {
                         this.$el.isotope('reLayout');
                         this.$el.isotope('reloadItems');                        
-                    },
-                    apply_isotope:function() {
-                        console.log('applying isotope >> ');
-                        this.$el.isotope({ itemClass: '.article' });                                                
                     }
 		}
 	);
