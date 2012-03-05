@@ -39,7 +39,9 @@ define([],
 	var StreamView = Backbone.View.extend(
 		{
 		    initialize:function() {
-                        this.set_filtered_type();
+                        var this_ = this;
+                        this.mode_test = function(x){ return this_._filter_for_type == undefined || (x.type == this_._filter_for_type); };
+                        this._filter = function(x) { return true; };
                     },
 		    render:function() {
                         this.$el.html('');
@@ -60,7 +62,8 @@ define([],
 		    },
                     set_filtered_type:function(type) {
                         // enter 'undefined' for 'all'
-                        this.mode_test = function(x){ return type == undefined || (x.type == type); };
+                        this._filter_for_type = type;
+                        this._update_filtered();
                     },
                     _update_filtered:function() {
                         var this_ = this;

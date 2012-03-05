@@ -18,7 +18,10 @@ require(
         _.uniq(data.items.map(function(x) { return x.type; })).map(
             function(type) {
                 var t =_.template($("#filter_button_template").html())({type: type ? type : "all"});
-                $(t).appendTo('#filter_buttons').click(function(x) { shv.getStreamView().set_filtered_type(type);  });
+                $(t).appendTo('#filter_buttons').click(function(x) {
+                                                           console.log('setting filtered type ', type);
+                                                           shv.getStreamView().set_filtered_type(type);
+                                                       });
             });
 
         // add shift left right buttons
