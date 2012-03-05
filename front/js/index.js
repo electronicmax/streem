@@ -9,7 +9,7 @@ require(
         var shv = new view.StreamHeadlineView(
             {
                 collection:data.items, // raw collection in this case
-                el:$('#main')[0]
+                el:$('body')[0]
             });
         shv.render();        
         window.shv = shv;
