@@ -42,7 +42,8 @@ A {
     display:inline-block;  height:100%;  vertical-align: top;
 }
 .lhs {
-    padding:30px; position:absolute; left:0px; top:0px; bottom:0px; width:500px; background:rgba(230,255,255,0.9); z-index: 5;
+    padding:30px; position:absolute; left:0px;
+    top:0px; bottom:0px; width:500px; background:rgba(230,255,255,0.9); z-index: 5;
 }
 .rhs {
     position:absolute; left:0px; right:0px; top:0px; bottom:0px; z-index:0;

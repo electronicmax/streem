@@ -19,13 +19,18 @@ define([],
 		    var html = this.options.headline ||
                         (!this.options.suppress_headlines && this.options.model.headline) ?
                         _.template(this.headline_template)({ a: this.options.model }) : _.template(this.small_template)({ a: this.options.model});
-                    console.log(html);
                     this.$el.html(html);
+                    this.$el.data('view', this);
 		    return this.el;
 		},
                 update:function(m) {
-                    this.options.model = m;
-                    return this.render();
+                    var this_ = this;
+                    this.$el.fadeOut("slow",
+                                     function() {
+                                         this_.options.model = m;
+                                         var el = this_.render();
+                                         $(el).fadeIn();
+                                     });
                 },
                 _fire_click:function() { this.trigger('click', this); }
 	    }
@@ -46,7 +51,11 @@ define([],
                                 v.bind('click', function() { this_.trigger('item_clicked', v); });
 				return v;
 			    });
-                        this.$el.isotope();
+                        this.$el.isotope({
+                                             layoutMode: 'masonry',
+                                             getSortData:{  sorted : function(x) { return this_._sort(x); } },
+                                             sortBy:'sorted'
+                                         });
 			return this.el;
 		    },
                     set_filtered_type:function(type) {
@@ -56,7 +65,7 @@ define([],
                     _update_filtered:function() {
                         var this_ = this;
                         this.views.map(function(view) { this_.mode_test(view.options.model) && this_._filter(view.options.model) ? view.$el.addClass('__keepers') : view.$el.removeClass('__keepers'); });
-                        $(this.el).isotope({filter: ".__keepers"});                                                
+                        this.$el.isotope({filter: ".__keepers"});                                                
                     },
                     set_filter:function(f) {
                         this._filter = f;
@@ -66,12 +75,17 @@ define([],
                         this._filter = function(x) { return true; };
                         this._update_filtered();
                     },
+                    _sort:function(x) {
+                        return this.f ? this.f(x) : x.toString();
+                    },
                     set_sort:function(f) {
-                       // this.$el.isotope({ getSortData:{sorder: f}, sortBy: 'sorder' });
+                        this.f = f;
+                        this.$el.isotope('updateSortData', this.$el.children());
+                        this.$el.isotope({sortBy: 'sorted'});                        
                     },
                     refresh:function() {
+                        this.$el.isotope('reloadItems');
                         this.$el.isotope('reLayout');
-                        this.$el.isotope('reloadItems');                        
                     }
 		}
 	);
@@ -90,7 +104,6 @@ define([],
                             collection:this.options.collection
                         });
                     this._shift = 0;
-                    this.streamview.set_sort(function(x) { return -x.posted ; });
                     this.selectedview = new ArticleView(
                         {
                             el:this.$el.find('.selected')[0],
@@ -100,19 +113,33 @@ define([],
                     this.streamview.bind('item_clicked', function(item) { this_.set_selected(item.options.model);  });
                     this.streamview.render();
                     this.selectedview.render();
+                    this.update_sort();
                     return this.el;                    
                 },
-                set_sort:function(f) {
+                update_sort:function() {
+                    var this_ = this;
+                    var datesort = function(x) { return x.id; };
                     // extend sort function to support shifting to the left/right
                     var l = this.options.collection.length;
-                    var sorted_chron = this.options.collection.sortBy(f).map(function(x) { return x.id; });
-                    var sfn = function(x) { return sorted_chron.indexOf(x.id) - this_._shift; };
+                    var sorted_chron = _(this.options.collection).sortBy(datesort).map(function(x) { return x.id; });
+                    console.log('sorted ', sorted_chron);
+                    var sfn = function(x) {
+                        var id = $(x).data('view').options.model.id;
+                        var sub = sorted_chron.indexOf(id) - this_._shift;
+                        console.log('id ', id, sub < 0 ? l - sub : sub);
+                        return sub < 0 ? l - sub : sub % l;
+                    };
                     this.streamview.set_sort(sfn);
                 },
                 shiftLeft:function() { this.shiftBy(1); },
                 shiftRight:function() { this.shiftBy(-1); },                
                 shiftBy:function(i) {
-                    this._shift = (this._shift ? this._shift : 0) + i;                    
+                    var l = this.options.collection.length;
+                    this._shift = (this._shift ? this._shift : 0) + i;
+                    this._shift = this._shift % l;
+                    if (this._shift < -l) { this._shift = 0; }                    
+                    console.log("shift is now ", this._shift);                    
+                    this.update_sort();
                 },
                 update:function() {
                     if (!this.streamview || !this.selectedview) { return; }

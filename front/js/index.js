@@ -2,6 +2,10 @@ require(
     ['streamview', 'data/data.js'],
     function(view,data) {
 	// load up some stuff
+
+        var i = 0;
+        data.items.map(function(x) { x.id = i++; });        
+        
         var shv = new view.StreamHeadlineView(
             {
                 collection:data.items, // raw collection in this case
