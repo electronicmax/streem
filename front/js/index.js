@@ -25,9 +25,22 @@ require(
             });
 
         // add shift left right buttons
-        $('<button>&lt;</button>').appendTo('#shift_buttons').click(function(x) { shv.shiftLeft(); });
-        $('<button>&gt;</button>').appendTo('#shift_buttons').click(function(x) { shv.shiftRight(); });        
-        
+        $('<button>&lt;&lt;</button>').appendTo('#shift_buttons').click(function(x) { shv.shiftLeft(); });
+        $('<button>&gt;&gt;</button>').appendTo('#shift_buttons').click(function(x) { shv.shiftRight(); });
+        $('<button>&lt;</button>').appendTo('#shift_buttons').click(function(x) {
+                                                                        var left = parseInt(shv.getStreamView().$el.css("left").slice(0,-2));
+                                                                        console.log(shv.getStreamView().$el.css("left").slice(0,-2));
+                                                                        left -= 170*4;
+                                                                        console.log('< left : ', left);
+                                                                        shv.getStreamView().$el.css("left", left);
+                                                                    });
+        $('<button>&gt;</button>').appendTo('#shift_buttons').click(function(x) {
+                                                                        var left = parseInt(shv.getStreamView().$el.css("left").slice(0,-2));
+                                                                        left += 170*4;
+                                                                        console.log('> left : ', left);
+                                                                        shv.getStreamView().$el.css("left", left);                                                                        
+                                                                    });
+
         // filter items when filter link is clicked
         $('#filters a').click(
             function(){

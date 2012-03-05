@@ -19,23 +19,20 @@ body {
     margin:0px;
     position:relative;    
 }
-
-
 A {
     text-decoration:none;
     opacity:0.6;
 }
 
 #main {
-    height:600px;
+    height:700px;
+    margin-top:-350px;
+    
     min-height:520px;
     margin-left:auto; margin-right:auto;
-    overflow-x: scroll;
-    border:1px solid grey;
     position:absolute;
     top:50%; left:0px;
     right:0px;
-    margin-top:-300px;
 }
 
 .lhs, .rhs {
@@ -43,16 +40,20 @@ A {
 }
 .lhs {
     padding:30px; position:absolute; left:0px;
+    overflow-x:hidden;
     top:0px; bottom:0px; width:500px; background:rgba(230,255,255,0.9); z-index: 5;
 }
 .rhs {
-    position:absolute; left:0px; right:0px; top:0px; bottom:0px; z-index:0;
-    overflow-x:scroll; height-max:900px;
+    position:absolute; left:0px; right:0px; top:0px; bottom:0px;
+    z-index:0;
+    overflow-x:scroll; 
 }
 .selected {
     border:1px solid rgba(0,0,0,0.4);
 }
-.stream { }
+.stream {
+    position:absolute; left:500px; right:0px; top:0px; bottom:0px; z-index:0; width:5000px;
+}
 
 footer {
     border-top:1px solid rgba(0,0,0,0.8);;
@@ -105,11 +106,11 @@ footer {
 }
 
 .isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-      -ms-transition-property: height, width;
-       -o-transition-property: height, width;
-          transition-property: height, width;
+  -webkit-transition-property: left, height, width;
+     -moz-transition-property: left, height, width;
+      -ms-transition-property: left, height, width;
+       -o-transition-property: left, height, width;
+          transition-property: left, height, width;
 }
 
 .isotope .isotope-item {
@@ -131,6 +132,4 @@ footer {
        -o-transition-duration: 0s;
           transition-duration: 0s;
 }
-
-
 
