@@ -32,8 +32,16 @@
   <header>
 
   </header>
-  <div role="main">
-    <div id="container"></div>
+  <div id="main">
+    <div class="lhs">
+      <div class="selected"></div>
+      <div id="shift_buttons"></div>
+      <div id="filter_buttons">        
+      </div>
+    </div>      
+    <div class="rhs">
+      <div class="stream"></div>
+    </div>
     <footer>
       electronic Max - <a href="http://twitter.com/emax">twitter.com/emax</a> - emax at alum.mit.edu
     </footer>    
@@ -50,6 +58,9 @@
     <div class="title"><%= a.title %></div>
     <div class="abstract"><%= a.abstract %></div>
     <div class="when"><%= a.posted %></div>        
+  </script>
+  <script type="text/template" id="filter_button_template">
+    <input type="checkbox" <%=(type == 'all' ? 'checked=true' : '')%>><%=  type %></button>
   </script>
   
 
