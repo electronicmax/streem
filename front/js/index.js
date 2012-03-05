@@ -27,18 +27,17 @@ require(
         // add shift left right buttons
         $('<button>&lt;&lt;</button>').appendTo('#shift_buttons').click(function(x) { shv.shiftLeft(); });
         $('<button>&gt;&gt;</button>').appendTo('#shift_buttons').click(function(x) { shv.shiftRight(); });
+        var offset = 0;
+        var update_position = function() {
+            shv.getStreamView().$el.css("left", 500 + 3*offset*170);            
+        };        
         $('<button>&lt;</button>').appendTo('#shift_buttons').click(function(x) {
-                                                                        var left = parseInt(shv.getStreamView().$el.css("left").slice(0,-2));
-                                                                        console.log(shv.getStreamView().$el.css("left").slice(0,-2));
-                                                                        left -= 170*4;
-                                                                        console.log('< left : ', left);
-                                                                        shv.getStreamView().$el.css("left", left);
+                                                                        offset++;
+                                                                        update_position();
                                                                     });
         $('<button>&gt;</button>').appendTo('#shift_buttons').click(function(x) {
-                                                                        var left = parseInt(shv.getStreamView().$el.css("left").slice(0,-2));
-                                                                        left += 170*4;
-                                                                        console.log('> left : ', left);
-                                                                        shv.getStreamView().$el.css("left", left);                                                                        
+                                                                        offset--;
+                                                                        update_position();
                                                                     });
 
         // filter items when filter link is clicked
