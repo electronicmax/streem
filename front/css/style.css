@@ -129,17 +129,42 @@ footer {
     /*text-shadow: 0.1em 0.1em #333;*/
     opacity:0;
 }
-#main:hover .left_arrow, #main:hover .right_arrow {
+
+#main:hover .left_arrow, #main:hover .right_arrow, #main:hover .shuffle {
     opacity:1.0;
 }
 
 #main .left_arrow i, #main .right_arrow i {
-    position:absolute; top:60%; margin-top:-36pt; 
+    position:absolute; top:50%; margin-top:-32pt; 
 } 
-#main .left_arrow {  background-color:rgba(255,255,255,0.5); left:720px;  }
-#main .left_arrow:hover {   background-color:rgba(255,255,255,0.5); left:700px;  }
+#main .left_arrow {  background-color:rgba(255,255,255,0.5); left:25px;  }
+#main .left_arrow:hover {   background-color:rgba(255,255,255,0.5); left:15px;  }
 #main .right_arrow {   background-color:rgba(255,255,255,0.5);  right:80px;  }
-#main .right_arrow:hover {   background-color:rgba(255,255,255,0.5);  right:60px;  }
+#main .right_arrow:hover {   background-color:rgba(255,255,255,0.5);  right:70px;  }
+
+/* shuffle */
+#main .shuffle {
+    position:absolute;
+    font-size:24pt;        
+    bottom: 10px; right:15px;
+    -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-property: all;
+     -moz-transition-property: all;
+      -ms-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
+    font-family: 'FontAwesome';
+    font-effect:outline;
+    font-weight:normal;
+    color:rgba(0,0,0,0.4);
+    opacity:0;
+}
+
+
 
 /**** Isotope CSS3 transitions ****/
 

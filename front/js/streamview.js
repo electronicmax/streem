@@ -129,7 +129,7 @@ define([],
                     var sfn = function(x) {
                         var id = $(x).data('view').options.model.id;
                         var sub = sorted_chron.indexOf(id) - this_._shift;
-                        console.log('id ', id, sub < 0 ? l - sub : sub);
+                        // console.log('id ', id, sub < 0 ? l - sub : sub);
                         return sub < 0 ? l - sub : sub % l;
                     };
                     this.streamview.set_sort(sfn);
@@ -141,7 +141,7 @@ define([],
                     this._shift = (this._shift ? this._shift : 0) + i;
                     this._shift = this._shift % l;
                     if (this._shift < -l) { this._shift = 0; }                    
-                    console.log("shift is now ", this._shift);                    
+                    // console.log("shift is now ", this._shift);                    
                     this.update_sort();
                 },
                 update:function() {

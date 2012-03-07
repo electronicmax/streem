@@ -25,21 +25,30 @@ require(
             });
 
         // add shift left right buttons
-        $('<button>&lt;&lt;</button>').appendTo('#shift_buttons').click(function(x) { shv.shiftLeft(); });
-        $('<button>&gt;&gt;</button>').appendTo('#shift_buttons').click(function(x) { shv.shiftRight(); });
+        // $('.shift_backward').click(function(x) { shv.shiftLeft(); });
+        $('.shuffle').click(function(x) {
+                                      shv.shiftBy(2);
+                                      //shv.shiftRight();
+                                      // var shift = Math.round(5*Math.random());
+                                      // console.log("shift >> ", shift);
+                                      // shv.shiftBy( shift );
+                                  });
+
+        // slidey
         var offset = 0;
         var update_position = function() {
-            shv.getStreamView().$el.css("left", 700+3*offset*170);            
-        };        
+            shv.getStreamView().$el.css("left", 700-3*offset*170);            
+        };
+        
         $('#main .right_arrow').click(function(x) {
-                                                                        offset++;
-                                                                        update_position();
-                                                                    });
+                                          offset++;
+                                          update_position();
+                                      });
         $('#main .left_arrow').click(function(x) {
-                                                                        offset--;
-                                                                        update_position();
-                                                                    });
-
+                                         offset = Math.max(0,offset-1);
+                                         update_position();
+                                     });
+        
         // filter items when filter link is clicked
         $('#filters a').click(
             function(){
