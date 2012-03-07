@@ -32,6 +32,16 @@ A {
     position:absolute;
     top:50%; left:0px;
     right:0px;
+    overflow-x:hidden;
+}
+.lhs {
+    padding:30px; position:absolute;
+    left:200px;    
+    overflow-x:hidden;
+    top:0px; bottom:0px;
+    width:500px;
+    background:rgba(0,0,0,0.3);
+    z-index: 5;
 }
 .lhs .inner {
     position:absolute;
@@ -39,22 +49,22 @@ A {
     height:700px;
     margin-top:-350px;
 }
-.lhs {
-    padding:30px; position:absolute; left:0px;
-    overflow-x:hidden;
-    top:0px; bottom:0px; width:500px; background:rgba(0,0,0,0.3); z-index: 5;
-}
 .rhs {
     position:absolute; left:0px; right:0px; top:0px; bottom:0px;
     z-index:0;
-    overflow-x:scroll;
     border:1px solid pink;
 }
 .selected {
     border:1px solid rgba(0,0,0,0.4);
 }
 .stream {
-    position:absolute; left:500px; right:0px; top:0px; bottom:0px; z-index:0; width:5000px;
+    left:700px;    
+    position:absolute;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    z-index:0;
+    width:5000px;
 }
 
 footer {
@@ -63,6 +73,7 @@ footer {
     font-size:8pt;
     color:rgba(0,0,0,0.8);
 }
+
 .article {
     position: relative;    
     font-size:16pt;
@@ -95,6 +106,40 @@ footer {
   pointer-events: none;
   z-index: 1;
 }
+
+
+#main .left_arrow, #main .right_arrow {
+    position:absolute;
+    font-size:72pt;        
+    top: 0px; bottom:0px;
+    -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-property: all;
+     -moz-transition-property: all;
+      -ms-transition-property: all;
+       -o-transition-property: all;
+          transition-property: all;
+    font-family: 'FontAwesome';
+    font-effect:outline;
+    font-weight:normal;
+    color:rgba(0,0,0,0.4);
+    /*text-shadow: 0.1em 0.1em #333;*/
+    opacity:0;
+}
+#main:hover .left_arrow, #main:hover .right_arrow {
+    opacity:1.0;
+}
+
+#main .left_arrow i, #main .right_arrow i {
+    position:absolute; top:60%; margin-top:-36pt; 
+} 
+#main .left_arrow {  background-color:rgba(255,255,255,0.5); left:720px;  }
+#main .left_arrow:hover {   background-color:rgba(255,255,255,0.5); left:700px;  }
+#main .right_arrow {   background-color:rgba(255,255,255,0.5);  right:80px;  }
+#main .right_arrow:hover {   background-color:rgba(255,255,255,0.5);  right:60px;  }
 
 /**** Isotope CSS3 transitions ****/
 

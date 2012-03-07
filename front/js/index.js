@@ -29,13 +29,13 @@ require(
         $('<button>&gt;&gt;</button>').appendTo('#shift_buttons').click(function(x) { shv.shiftRight(); });
         var offset = 0;
         var update_position = function() {
-            shv.getStreamView().$el.css("left", 500 + 3*offset*170);            
+            shv.getStreamView().$el.css("left", 700+3*offset*170);            
         };        
-        $('<button>&lt;</button>').appendTo('#shift_buttons').click(function(x) {
+        $('#main .right_arrow').click(function(x) {
                                                                         offset++;
                                                                         update_position();
                                                                     });
-        $('<button>&gt;</button>').appendTo('#shift_buttons').click(function(x) {
+        $('#main .left_arrow').click(function(x) {
                                                                         offset--;
                                                                         update_position();
                                                                     });
