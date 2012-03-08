@@ -9,7 +9,6 @@ html,
 body {
     height: 100%;
 }
-
 body {
     padding-top:100px;
     background:white;
@@ -23,11 +22,19 @@ A {
     text-decoration:none;
     opacity:0.6;
 }
-
+header {
+    position:absolute;
+    top:50%; margin:-400px 0px 0px 0px;
+    width:100%;
+    border-bottom:1px solid rgba(200,200,200,0.5);
+}
+header .headercontent {
+    margin:0px 0px 0px 15px;
+}
+header h1 { margin:0px; padding:0px; }
 #main {
     height:700px;
     margin-top:-350px;
-    min-height:520px;
     margin-left:auto; margin-right:auto;
     position:absolute;
     top:50%; left:0px;
@@ -36,23 +43,18 @@ A {
 }
 .lhs {
     padding:30px; position:absolute;
-    left:200px;    
+    left:189px;   /*left:200px;    */
     overflow-x:hidden;
-    top:0px; bottom:0px;
-    width:500px;
-    background:rgba(0,0,0,0.3);
+    top:50%; margin-top:-361px; height: 710px;
+    width:511px; /* width:500px; */
+    background:rgba(255,255,255,0.7);
     z-index: 5;
-}
-.lhs .inner {
-    position:absolute;
-    top:50%;
-    height:700px;
-    margin-top:-350px;
+    border-left:1px solid rgba(200,200,200,0.5);
+    border-right:1px solid rgba(200,200,200,0.5);    
 }
 .rhs {
     position:absolute; left:0px; right:0px; top:0px; bottom:0px;
     z-index:0;
-    border:1px solid pink;
 }
 .selected {
     border:1px solid rgba(0,0,0,0.4);
@@ -68,7 +70,10 @@ A {
 }
 
 footer {
-    border-top:1px solid rgba(0,0,0,0.8);;
+    position:absolute;
+    top:50%;
+    margin-top:350px;
+    border-top:1px solid rgba(200,200,200,0.5);    
     width:100%;
     font-size:8pt;
     color:rgba(0,0,0,0.8);
@@ -84,23 +89,18 @@ footer {
     padding:20px;
     border:1px solid rgba(0,0,0,0.4);    
 }
-
 .headline_article {
-    background:rgba(255,255,255,0.9);
+    background:rgba(255,255,255,1.0);
     border: 1px solid rgba(0,0,0,0.3);    
-    height:420px;
-    width:420px;
+    height:440px;
+    width:440px;
 }
 
 .headline_article .title {
     font-size:72pt;
 }
-.row {
-}
 
-.isotope-item {
-  z-index: 2;
-}
+.isotope-item { z-index: 2; }
 
 .isotope-hidden.isotope-item {
   pointer-events: none;

@@ -25,11 +25,11 @@ define([],
 		},
                 update:function(m) {
                     var this_ = this;
-                    this.$el.fadeOut("slow",
+                    this.$el.fadeOut("fase",
                                      function() {
                                          this_.options.model = m;
                                          var el = this_.render();
-                                         $(el).fadeIn();
+                                         $(el).fadeIn('fast');
                                      });
                 },
                 _fire_click:function() { this.trigger('click', this); }
