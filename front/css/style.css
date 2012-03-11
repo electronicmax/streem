@@ -56,6 +56,29 @@ header h1 { margin:0px; padding:0px; }
     position:absolute; left:0px; right:0px; top:0px; bottom:0px;
     z-index:0;
 }
+.tag_filters, .type_filters {
+    display:inline-block;
+    vertical-align:top;
+}
+.type_filters { width:100px; }
+.tag_filters { width:300px; }
+.filter_button {
+    vertical-align:top;
+    display:inline-block;
+    width:150px;
+    margin: 0px; padding:0px;
+}
+.filter_button  button {
+    text-align:left;
+    margin:0 auto 0 auto; 
+    background:white;
+    border:1px solid white;
+    padding:3px;
+}
+.filter_enabled button {
+    background:white;
+    border:1px solid rgba(0,0,0,0.6);
+}
 .lhs .selected {
     background:rgba(255,255,255,1.0);
     border: 1px solid rgba(0,0,0,0.3);    
@@ -90,8 +113,8 @@ header h1 { margin:0px; padding:0px; }
 .talk {  background-color:rgba(250,245,255,0.5); }
 .paper {  background-color:rgba(240,225,255,0.2); }
 .project {  background-color:rgba(250,230,255,0.2); }
-.blog {  background-color:rgba(25,225,205,0.2); }
-.stream .tweet { background-color:rgba(100,240,255,0.3) !important; color:black;  }
+/*.blog {  background-color:rgba(25,225,205,0.2); }*/
+/*.stream .tweet { background-color:rgba(100,240,255,0.3) !important; color:black;  }*/
 
 .article {
     position: relative;    
@@ -111,15 +134,6 @@ header h1 { margin:0px; padding:0px; }
     bottom:0px;
     z-index:0;
     width:2000px;
-}
-footer {
-    position:absolute;
-    top:50%;
-    margin-top:350px;
-    border-top:1px solid rgba(200,200,200,0.5);    
-    width:100%;
-    font-size:8pt;
-    color:rgba(0,0,0,0.8);
 }
 .headline_article .title {
     font-size:72pt;
@@ -235,3 +249,15 @@ footer {
     border:1px solid green;
     font-size:23pt;
 }
+
+/**
+   footer {
+    position:absolute;
+    top:50%;
+    margin-top:350px;
+    border-top:1px solid rgba(200,200,200,0.5);    
+    width:100%;
+    font-size:8pt;
+    color:rgba(0,0,0,0.8);
+}
+*/

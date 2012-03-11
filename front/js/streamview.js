@@ -11,7 +11,6 @@ define([],
                 render:function() {
                     var this_ = this;
                     this.$el.html('');
-                    console.log("new model is ", this.options.model);
                     if (!this.options.model) { return this.el; }                    
                     this.$el.attr('uri', this.options.model.id);
                     var html =  _.template(this.options.template || this.template)({ a: this.options.model});
@@ -42,8 +41,10 @@ define([],
 		{
 		    initialize:function() {
                         var this_ = this;
-                        this.mode_test = function(x){ return this_._filter_for_type == undefined || (x.type == this_._filter_for_type); };
-                        this._filter = function(x) { return true; };
+                        this._filters = [];
+                        this.mode_test = function(x){
+                            return this_._filters.reduce(function(f,g) { return ((f && f.call && f(x)) || (f && !f.call)) && g(x); }, true);
+                        };
                     },
 		    render:function() {
                         this.$el.html('');
@@ -62,22 +63,21 @@ define([],
                                          });
 			return this.el;
 		    },
-                    set_filtered_type:function(type) {
-                        // enter 'undefined' for 'all'
-                        this._filter_for_type = type;
+                    add_filter:function(f) {
+                        this._filters.push(f);
                         this._update_filtered();
+                    },
+                    remove_filter:function(f) {
+                        this._filters = _(this._filters).without(f);
+                        this._update_filtered();                        
                     },
                     _update_filtered:function() {
                         var this_ = this;
-                        this.views.map(function(view) { this_.mode_test(view.options.model) && this_._filter(view.options.model) ? view.$el.addClass('__keepers') : view.$el.removeClass('__keepers'); });
+                        this.views.map(function(view) { this_.mode_test(view.options.model) ? view.$el.addClass('__keepers') : view.$el.removeClass('__keepers'); });
                         this.$el.isotope({filter: ".__keepers"});                                                
                     },
-                    set_filter:function(f) {
-                        this._filter = f;
-                        this._update_filtered();
-                    },                    
-                    clear_filter:function(f) {
-                        this._filter = function(x) { return true; };
+                    clear_filters:function(f) {
+                        this._filters = [];
                         this._update_filtered();
                     },
                     _sort:function(x) {
@@ -155,7 +155,9 @@ define([],
                 },
                 set_selected:function(m) {
                     this.options.selected = m;
-                    this.streamview.set_filter(function(x) { return x.id !== m.id; });
+                    if (this._sel_filter) {  this.streamview.remove_filter(this._sel_filter); }
+                    this.sel_filter = function(x) { return x.id !== m.id; };
+                    this.streamview.add_filter(this.sel_filter);
                     this.selectedview.update(m);
                 },
                 getStreamView:function() {  return this.streamview;          },

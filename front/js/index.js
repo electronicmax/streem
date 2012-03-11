@@ -13,21 +13,43 @@ require(
                              return [];
                          }).reduce(function(x,y) { return x.concat(y); }));
         };
+
+        var FilterButtonView = Backbone.View.extend(
+            {
+                events : { 'click button': '_click'   },
+                className:"filter_button",                
+                template:$("#filter_button_template").html(),
+                initialize:function() {
+                },
+                render:function() {
+                    this.$el.html('');
+                    this.$el.html(_(this.template).template()({label:this.options.label}));
+                    this.options.enabled ? this.$el.addClass('filter_enabled') : '';
+                    return this.el;
+                },
+                _click:function() {
+                    this.options.enabled = !this.options.enabled;
+                    this.options.enabled ? this.$el.addClass('filter_enabled') : this.$el.removeClass('filter_enabled');
+                    (this.options.toggle !== undefined) ? this.options.toggle(this.options.enabled) : '';
+                    return;
+                }
+            });
         
         var MainView = Backbone.View.extend(
             {
                 events: {
                     "click .left_arrow":"_slide_left",
                     "click .right_arrow":"_slide_right",
-                    "click .shuffle":"_shuffle",                    
-                    "click .filters":"_toggle_filter"
+                    "click .shuffle":"_shuffle"
                 },
                 initialize:function() {
                     this.offset = 0;
                     var this_ = this;
                     $(window).keyup(function() { this_._keyup.apply(this_,arguments); });
+                    this.bind("filter_change", function() { this_._reset_slide(); });
                 },
                 render:function() {
+                    var this_ = this;
                     var data = this.options.data;
                     var shv = new view.StreamHeadlineView({ collection:data, el:this.el });
                     this.shv = shv;
@@ -35,27 +57,39 @@ require(
                     // filter buttons
                     var controls_el = shv.get_controls_el();
                     // create filter buttons
-                    var filters = $("<div class='filters'></div>").appendTo(controls_el);
+                    var filters = $("<div class='type_filters'></div>").appendTo(controls_el);
                     var types = split_reduce(function(x) { return x.type; }, data);
-                    types.map(
-                        function(type) {
-                            var t =_.template($("#filter_button_template").html())({type: type ? type : "all"});
-                            $(t).appendTo(filters).click(
-                                function(x) {
-                                    shv.getStreamView().set_filtered_type(type);
-                                });
+                    types.map(function(type) {
+                            var m = function(x) { return x.type && x.type.indexOf(type) >= 0; };
+                            var b = new FilterButtonView({
+                                                             label:type,
+                                                             toggle:function(on) {
+                                                                 console.log('toggle type ', type, on); 
+                                                                 on ? shv.getStreamView().add_filter(m) : shv.getStreamView().remove_filter(m);
+                                                                 this_.trigger('filter_change');
+                                                             }
+                                                         }
+                                                        );
+                            filters.append(b.render());                            
                         });
-
+                    filters = $("<div class='tag_filters'></div>").appendTo(controls_el);
                     var tags = split_reduce(function(x) { return x.tags; }, data);
-                    tags.map(function(type) {
-                                 console.log("new type ", type);
-                                 var t =_.template($("#filter_button_template").html())({type: type});
-                                 $(t).appendTo(filters).click(
-                                     function(x) {
-                                         shv.getStreamView().set_filtered_type(type);
-                                     });
+                    tags.map(function(tag) {
+                                 var m = function(x) { return x.tags && x.tags.indexOf(tag) >= 0; };
+                                 var b = new FilterButtonView({
+                                                                  label:tag,
+                                                                  toggle:function(on) {
+                                                                      console.log('toggle tag ', tag, on); 
+                                                                      on ? shv.getStreamView().add_filter(m) : shv.getStreamView().remove_filter(m);
+                                                                      this_.trigger('filter_change');                                                                      
+                                                                  }
+                                                              });
+                                 filters.append(b.render());                                                             
                         });                                        
-                    
+                },
+                _reset_slide:function() {
+                    this.offset = 0;
+                    this.update_position();                    
                 },
                 _slide_right:function() {
                     console.log("slide right");
@@ -73,12 +107,6 @@ require(
                 },
                 _shuffle:function() {
                     this.shv.shiftBy(2); 
-                },
-                _toggle_filter:function(el) {
-                    var selector = $(this).attr('data-filter');
-                    console.log('_toggle filter  ', selector, el, $(this));
-                    // this.shv.getStreamView().set_filtered_type(); // $container.isotope({ filter: selector });
-                    return true;                    
                 },
                 _keyup:function(evt) {
                     if (evt.keyCode == 39) { return this._slide_right(); };
