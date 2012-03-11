@@ -11,6 +11,7 @@ require(
                 events: {
                     "click .left_arrow":"_slide_left",
                     "click .right_arrow":"_slide_right",
+                    "click .shuffle":"_shuffle",                    
                     "click .filters":"_toggle_filter"
                 },
                 initialize:function() {
