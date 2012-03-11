@@ -1,10 +1,11 @@
 require(
-    ['streamview', 'data/data.js', 'data/google-spreadsheet-connector.js'],
-    function(view,data,googless) {
+    ['streamview', 'data/data.js', 'data/google-spreadsheet-connector.js', 'data/twitter-connector.js'],
+    function(view,data,googless,Twitter) {
 	// load up some stuff
         var i = 0;
         // reset the ids, probably not something we actually want to do
         var ss = new googless.SpreadSheet('0AmssmNSs4_VudGVsWjZQUEc3SkprcnRYS3lzRHpDcGc');
+        var tt = new Twitter.Twetter('emax');
         
         var MainView = Backbone.View.extend(
             {
@@ -67,16 +68,17 @@ require(
                     return undefined;
                 }                
             });
-
+        
         ss.fetch().then(function(rows) {
-                            console.log("got rows", rows);
-                            rows.map(function(x) { x.id = i++; });                            
-                            var main = new MainView({
-                                         el:$("#main")[0],
-                                         data: rows
-                                     });
-                            window.main = main;
-                            main.render();
+                            tt.fetch().then(function(tweet_rows) {
+                                                rows = rows.concat(tweet_rows);
+                                                rows.map(function(x) { x.id = i++; });
+                                                var main = new MainView({
+                                                                            el:$("#main")[0],
+                                                                            data: rows
+                                                                        });
+                                                main.render();                                                
+                                            });
                         });
         
         

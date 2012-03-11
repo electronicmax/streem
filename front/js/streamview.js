@@ -9,12 +9,20 @@ define([],
                      
                 },
                 render:function() {
+                    var this_ = this;
                     this.$el.html('');
+                    console.log("new model is ", this.options.model);
                     if (!this.options.model) { return this.el; }                    
                     this.$el.attr('uri', this.options.model.id);
                     var html =  _.template(this.options.template || this.template)({ a: this.options.model});
                     this.$el.html(html);
                     this.$el.data('view', this);
+                    if (this.options.model.type) {
+                        this.options.model.type.replace(/;/g, ' ').split(' ').map(function(c) { this_.$el.addClass(c); });
+                    }
+                    if (this.options.model.importance) {
+                        this.$el.addClass('importance-'+this.options.model.importance);
+                    }
 		    return this.el;
 		},
                 update:function(m) {
@@ -49,7 +57,7 @@ define([],
 			    });
                         this.$el.isotope({
                                              layoutMode: 'masonry',
-                                             getSortData:{  sorted : function(x) { return this_._sort(x); } },
+                                             getSortData:{ sorted : function(x) { return this_._sort(x); } },
                                              sortBy:'sorted'
                                          });
 			return this.el;
@@ -103,7 +111,7 @@ define([],
                     this._shift = 0;
                     this.selectedview = new ArticleView(
                         {
-                            template:$("#headline_template").html(),
+                            template:$("#selected_template").html(),
                             el:this.$el.find('.selected')[0],
                             model:this.options.selected || (this.options.collection && this.options.collection[0])
                         }
@@ -127,7 +135,8 @@ define([],
                         // console.log('id ', id, sub < 0 ? l - sub : sub);
                         return sub < 0 ? l - sub : sub % l;
                     };
-                    this.streamview.set_sort(sfn);
+                    // this.streamview.set_sort(sfn);
+                    this.streamview.set_sort(function(x) { return -$(x).data('view').options.model.id; });
                 },
                 shiftLeft:function() { this.shiftBy(1); },
                 shiftRight:function() { this.shiftBy(-1); },                

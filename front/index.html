@@ -60,11 +60,9 @@
   <!-- articles --> 
   <script type="text/template" id="article_template">
     <div class="title"><%= a.title %></div>
-    <div class="abstract"><%= a.abstract %></div>
-    <div class="when"><%= a.posted %></div>        
   </script>
   
-  <script type="text/template" id="headline_template">
+  <script type="text/template" id="selected_template">
     <div class="title"><%= a.title %></div>
     <div class="abstract"><%= a.abstract %></div>
     <div class="when"><%= a.posted %></div>
@@ -77,14 +75,12 @@
       <div class="link"><a target="_new" href="<%= a.link2 %>"><%= a.link2_label %></a></div>
       <% } %>      
     </div>    
-  </script>
-  
+  </script>  
   <script type="text/template" id="filter_button_template">
     <div class="<%= type %>">
       <input type="checkbox" <%=(type == 'all' ? 'checked=true' : '')%>><%= type %></input>
     </div>
-  </script>  
-
+  </script>
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
