@@ -16,19 +16,21 @@ require(
                 },
                 initialize:function() {
                     this.offset = 0;
+                    var this_ = this;
+                    $(window).keyup(function() { this_._keyup.apply(this_,arguments); });
                 },
                 render:function() {
                     var shv = new view.StreamHeadlineView({ collection:this.options.data, el:this.el });
                     this.shv = shv;
                     shv.render();
-
                     // filter buttons
                     var controls_el = shv.get_controls_el();
                     // create filter buttons
+                    var filters = $("<div class='filters'></div>").appendTo(controls_el);
                     _.uniq(data.items.map(function(x) { return x.type; })).map(
                         function(type) {
                             var t =_.template($("#filter_button_template").html())({type: type ? type : "all"});
-                            $(t).appendTo(controls_el).click(
+                            $(t).appendTo(filters).click(
                                 function(x) {
                                     console.log('setting filtered type ', type);
                                     shv.getStreamView().set_filtered_type(type);
@@ -54,8 +56,15 @@ require(
                 },
                 _toggle_filter:function(el) {
                     var selector = $(this).attr('data-filter');
-                    $container.isotope({ filter: selector });
-                    return false;                    
+                    console.log('_toggle filter  ', selector, el, $(this));
+                    // this.shv.getStreamView().set_filtered_type(); // $container.isotope({ filter: selector });
+                    return true;                    
+                },
+                _keyup:function(evt) {
+                    if (evt.keyCode == 39) { return this._slide_right(); };
+                    if (evt.keyCode == 37) { return this._slide_left(); };
+                    if (evt.keyCode == 32) { return this._shuffle(); };
+                    return undefined;
                 }                
             });
 

@@ -3,9 +3,8 @@ define([],
 	var ArticleView = Backbone.View.extend(
 	    {
                 events: { "click" : "_fire_click" },
-		small_template:$('#article_template').html(),
+		template:$('#article_template').html(),
                 className : "article", 
-		headline_template:$('#headline_template').html(),
                 initialize:function() {
                      
                 },
@@ -13,12 +12,7 @@ define([],
                     this.$el.html('');
                     if (!this.options.model) { return this.el; }                    
                     this.$el.attr('uri', this.options.model.id);
-                    if (!this.options.suppress_headlines && this.options.model.headline) {
-                        this.$el.addClass('headline_article');
-                    }
-		    var html = this.options.headline ||
-                        (!this.options.suppress_headlines && this.options.model.headline) ?
-                        _.template(this.headline_template)({ a: this.options.model }) : _.template(this.small_template)({ a: this.options.model});
+                    var html =  _.template(this.options.template || this.template)({ a: this.options.model});
                     this.$el.html(html);
                     this.$el.data('view', this);
 		    return this.el;
@@ -107,9 +101,9 @@ define([],
                             collection:this.options.collection
                         });
                     this._shift = 0;
-                    console.log("selectedview ", this.$el.find('.selected')[0]);
                     this.selectedview = new ArticleView(
                         {
+                            template:$("#headline_template").html(),
                             el:this.$el.find('.selected')[0],
                             model:this.options.selected || (this.options.collection && this.options.collection[0])
                         }
@@ -151,7 +145,6 @@ define([],
                     this.selectedview.update(this.options.selected);
                 },
                 set_selected:function(m) {
-                    console.log(" set selected ", m);
                     this.options.selected = m;
                     this.streamview.set_filter(function(x) { return x.id !== m.id; });
                     this.selectedview.update(m);

@@ -67,10 +67,22 @@
   <script type="text/template" id="headline_template">
     <div class="title"><%= a.title %></div>
     <div class="abstract"><%= a.abstract %></div>
-    <div class="when"><%= a.posted %></div>        
+    <div class="when"><%= a.posted %></div>
+    <div class="tags"><%= a.tags %></div>
+    <div class="links">
+      <% if (a.link1) {  %>
+      <div class="link"><a target="_new" href="<%= a.link1 %>"><%= a.link1_label %></a></div>
+      <% } %>
+      <% if (a.link2) {  %>
+      <div class="link"><a target="_new" href="<%= a.link2 %>"><%= a.link2_label %></a></div>
+      <% } %>      
+    </div>    
   </script>
+  
   <script type="text/template" id="filter_button_template">
-    <input type="checkbox" <%=(type == 'all' ? 'checked=true' : '')%>><%=  type %></button>
+    <div class="<%= type %>">
+      <input type="checkbox" <%=(type == 'all' ? 'checked=true' : '')%>><%= type %></input>
+    </div>
   </script>  
 
   <!-- JavaScript at the bottom for fast page loading -->

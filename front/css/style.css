@@ -63,6 +63,14 @@ header h1 { margin:0px; padding:0px; }
     width:440px;
     border:1px solid rgba(0,0,0,0.4);
 }
+.selected .title {
+    font-size:48pt;
+    margin-bottom:0.2em;
+}
+.selected .abstract {
+    font-size:18pt;
+    line-height:1em;    
+}
 .stream {
     left:700px;    
     position:absolute;
@@ -72,7 +80,6 @@ header h1 { margin:0px; padding:0px; }
     z-index:0;
     width:5000px;
 }
-
 footer {
     position:absolute;
     top:50%;
@@ -82,7 +89,6 @@ footer {
     font-size:8pt;
     color:rgba(0,0,0,0.8);
 }
-
 .article {
     position: relative;    
     font-size:16pt;
@@ -93,11 +99,9 @@ footer {
     padding:20px;
     border:1px solid rgba(0,0,0,0.4);    
 }
-
 .headline_article .title {
     font-size:72pt;
 }
-
 .isotope-item { z-index: 2; }
 
 .isotope-hidden.isotope-item {
@@ -203,3 +207,11 @@ footer {
           transition-duration: 0s;
 }
 
+
+.filters input[type=checkbox]{
+    border:1px solid black;
+}
+.filters div input[type=checkbox]:checked {
+    border:1px solid green;
+    font-size:23pt;
+}
