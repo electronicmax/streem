@@ -56,7 +56,11 @@ header h1 { margin:0px; padding:0px; }
     position:absolute; left:0px; right:0px; top:0px; bottom:0px;
     z-index:0;
 }
-.selected {
+.lhs .selected {
+    background:rgba(255,255,255,1.0);
+    border: 1px solid rgba(0,0,0,0.3);    
+    height:440px;
+    width:440px;
     border:1px solid rgba(0,0,0,0.4);
 }
 .stream {
@@ -88,12 +92,6 @@ footer {
     margin:5px;
     padding:20px;
     border:1px solid rgba(0,0,0,0.4);    
-}
-.headline_article {
-    background:rgba(255,255,255,1.0);
-    border: 1px solid rgba(0,0,0,0.3);    
-    height:440px;
-    width:440px;
 }
 
 .headline_article .title {

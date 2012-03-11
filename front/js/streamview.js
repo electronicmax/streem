@@ -97,16 +97,17 @@ define([],
             {
                 initialize:function() {
                     // inside my el i should have a 'selected' block and a 'stream' block
-                },                    
+                },
+                get_controls_el:function() { return this.$el.find('.controls'); },
                 render:function() {
                     var this_ = this;
-                    console.log('making a streamview - ', this.$el.find('.stream'), this.$el.find('.stream')[0], this.$el.find('.selected')[0]);
                     this.streamview = new StreamView(
                         {
                             el: this.$el.find('.stream')[0],
                             collection:this.options.collection
                         });
                     this._shift = 0;
+                    console.log("selectedview ", this.$el.find('.selected')[0]);
                     this.selectedview = new ArticleView(
                         {
                             el:this.$el.find('.selected')[0],
@@ -150,9 +151,10 @@ define([],
                     this.selectedview.update(this.options.selected);
                 },
                 set_selected:function(m) {
+                    console.log(" set selected ", m);
                     this.options.selected = m;
                     this.streamview.set_filter(function(x) { return x.id !== m.id; });
-                    this.selectedview.update(m);                    
+                    this.selectedview.update(m);
                 },
                 getStreamView:function() {  return this.streamview;          },
                 getSelectedView:function() {  return this.selectedview;      }                
