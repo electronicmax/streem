@@ -1,10 +1,12 @@
 require(
-    ['streamview', 'data/data.js'],
-    function(view,data) {
+    ['streamview', 'data/data.js', 'data/google-spreadsheet-connector.js'],
+    function(view,data,googless) {
 	// load up some stuff
-
         var i = 0;
-        data.items.map(function(x) { x.id = i++; });        
+        // reset the ids, probably not something we actually want to do
+        data.items.map(function(x) { x.id = i++; });
+        var ss = new googless.SpreadSheet('0AmssmNSs4_VudGVsWjZQUEc3SkprcnRYS3lzRHpDcGc');        
+        ss.fetch().then(function(rows) {  console.log("got rows", rows);      });        
         
         var shv = new view.StreamHeadlineView(
             {
@@ -13,7 +15,7 @@ require(
             });
         shv.render();        
         window.shv = shv;
-
+        
         // populate the filtrers
         _.uniq(data.items.map(function(x) { return x.type; })).map(
             function(type) {
@@ -26,10 +28,7 @@ require(
 
         // add shift left right buttons
         // $('.shift_backward').click(function(x) { shv.shiftLeft(); });
-        $('.shuffle').click(function(x) {
-                                      shv.shiftBy(2);
-                                      //shv.shiftRight();
-                                  });
+        $('.shuffle').click(function(x) {  shv.shiftBy(2);   });
 
         // slidey arrows left and right 
         var offset = 0;
