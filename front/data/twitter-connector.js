@@ -18,18 +18,19 @@ define([],
                },
                convert : function(data) {
                    var this_ = this;
-                   return data.map(function(x) {
-                                       return {
-                                           type:"tweet",
-                                           id:x.id,
-                                           published_on: x.created_at,
-                                           posted: x.created_at,
-                                           link1: "https://twitter.com/#!/"+this_.userid+"/status/"+x.id_str,
-                                           link1_label:"see original tweet",
-                                           "title": x.text.slice(0,30).concat("..."),
-                                           "abstract":x.text
-                                       };
-                                   });                        
+                   return data.filter(function(x) { return x.user_mentions == null || x.user_mentions.length == 0; })
+                       .map(function(x) {
+                                return {
+                                    type:"tweet",
+                                    id:x.id,
+                                    published_on: x.created_at,
+                                    posted: x.created_at,
+                                    link1: "https://twitter.com/#!/"+this_.userid+"/status/"+x.id_str,
+                                    link1_label:"see original tweet",
+                                    "title": x.text.slice(0,30).concat("..."),
+                                    "abstract":x.text
+                                };
+                            });                        
                }               
            };
            return {

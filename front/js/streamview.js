@@ -135,8 +135,8 @@ define([],
                         // console.log('id ', id, sub < 0 ? l - sub : sub);
                         return sub < 0 ? l - sub : sub % l;
                     };
-                    // this.streamview.set_sort(sfn);
-                    this.streamview.set_sort(function(x) { return -$(x).data('view').options.model.id; });
+                    this.streamview.set_sort(sfn);
+                    // this.streamview.set_sort(function(x) { return -$(x).data('view').options.model.id; });
                 },
                 shiftLeft:function() { this.shiftBy(1); },
                 shiftRight:function() { this.shiftBy(-1); },                
