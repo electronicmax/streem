@@ -67,6 +67,14 @@ define([],
                         this._filters.push(f);
                         this._update_filtered();
                     },
+                    getNumberofVisibleItems:function() {
+                        return this.$el.find('.__keepers').length;
+                    },
+                    getVisibleItems:function() {
+                        return this.$el.find('.__keepers').map(function(x) {
+                                                                   return $(this).data("view").model;
+                                                               });
+                    },                    
                     remove_filter:function(f) {
                         this._filters = _(this._filters).without(f);
                         this._update_filtered();                        
@@ -74,7 +82,9 @@ define([],
                     _update_filtered:function() {
                         var this_ = this;
                         this.views.map(function(view) { this_.mode_test(view.options.model) ? view.$el.addClass('__keepers') : view.$el.removeClass('__keepers'); });
-                        this.$el.isotope({filter: ".__keepers"});                                                
+                        var newwidth = Math.max(1.0, this.getNumberofVisibleItems()/9) * 800;
+                        this.$el.isotope({filter: ".__keepers"});
+                        this.$el.isotope("reLayout");                        
                     },
                     clear_filters:function(f) {
                         this._filters = [];
@@ -155,9 +165,11 @@ define([],
                 },
                 set_selected:function(m) {
                     this.options.selected = m;
-                    if (this._sel_filter) {  this.streamview.remove_filter(this._sel_filter); }
-                    this.sel_filter = function(x) { return x.id !== m.id; };
-                    this.streamview.add_filter(this.sel_filter);
+                    if (this._sel_filter) {
+                        this.streamview.remove_filter(this._sel_filter);
+                    }
+                    this._sel_filter = function(x) { return x.id !== m.id; };
+                    this.streamview.add_filter(this._sel_filter);
                     this.selectedview.update(m);
                 },
                 getStreamView:function() {  return this.streamview;          },

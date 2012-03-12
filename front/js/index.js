@@ -46,7 +46,13 @@ require(
                     this.offset = 0;
                     var this_ = this;
                     $(window).keyup(function() { this_._keyup.apply(this_,arguments); });
-                    this.bind("filter_change", function() { this_._reset_slide(); });
+                    this.bind("filter_change", function(num_items) {
+                                  this_._reset_slide();
+                                  var l = this_.shv.getStreamView().getVisibleItems();
+                                  if (l.length) {
+                                      this_.shv.set_selected(l[0]);
+                                  }
+                              });
                 },
                 render:function() {
                     var this_ = this;
@@ -66,6 +72,7 @@ require(
                                                              toggle:function(on) {
                                                                  console.log('toggle type ', type, on); 
                                                                  on ? shv.getStreamView().add_filter(m) : shv.getStreamView().remove_filter(m);
+                                                                 console.log("number of visible items, ", shv.getStreamView().getNumberofVisibleItems());
                                                                  this_.trigger('filter_change');
                                                              }
                                                          }
@@ -81,7 +88,8 @@ require(
                                                                   toggle:function(on) {
                                                                       console.log('toggle tag ', tag, on); 
                                                                       on ? shv.getStreamView().add_filter(m) : shv.getStreamView().remove_filter(m);
-                                                                      this_.trigger('filter_change');                                                                      
+                                                                      console.log("number of visible items, ", shv.getStreamView().getNumberofVisibleItems());
+                                                                      this_.trigger('filter_change');
                                                                   }
                                                               });
                                  filters.append(b.render());                                                             
