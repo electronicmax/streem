@@ -70,7 +70,6 @@ require(
                             var b = new FilterButtonView({
                                                              label:type,
                                                              toggle:function(on) {
-                                                                 console.log('toggle type ', type, on); 
                                                                  on ? shv.getStreamView().add_filter(m) : shv.getStreamView().remove_filter(m);
                                                                  console.log("number of visible items, ", shv.getStreamView().getNumberofVisibleItems());
                                                                  this_.trigger('filter_change');
