@@ -13,7 +13,6 @@ require(
                              return [];
                          }).reduce(function(x,y) { return x.concat(y); }));
         };
-
         var FilterButtonView = Backbone.View.extend(
             {
                 events : { 'click button': '_click'   },
@@ -24,6 +23,7 @@ require(
                 render:function() {
                     this.$el.html('');
                     this.$el.html(_(this.template).template()({label:this.options.label}));
+                    this.$el.data('view', this);
                     this.options.enabled ? this.$el.addClass('filter_enabled') : '';
                     return this.el;
                 },
@@ -32,6 +32,11 @@ require(
                     this.options.enabled ? this.$el.addClass('filter_enabled') : this.$el.removeClass('filter_enabled');
                     (this.options.toggle !== undefined) ? this.options.toggle(this.options.enabled) : '';
                     return;
+                },
+                set_unselected:function() {
+                    this.options.enabled = false;
+                    this.$el.removeClass('filter_enabled');
+                    // do not call toggle
                 }
             });
         
@@ -71,7 +76,17 @@ require(
                                                              label:type,
                                                              toggle:function(on) {
                                                                  on ? shv.getStreamView().add_filter(m) : shv.getStreamView().remove_filter(m);
-                                                                 console.log("number of visible items, ", shv.getStreamView().getNumberofVisibleItems());
+                                                                 if (this_.options.mutually_exclusive_filters && this_._type_filter) {
+                                                                     // deselect others                                                                     
+                                                                     shv.getStreamView().remove_filter(this_._type_filter);
+                                                                     // manually deselect others
+                                                                     b.$el.parent().find('.filter_button').filter(
+                                                                         function() {  return this !== b.el; }).map(
+                                                                             function() {
+                                                                                 $(this).data('view').set_unselected();
+                                                                             });
+                                                                 }
+                                                                 if (this_.options.mutually_exclusive_filters) { this_._type_filter = m; };
                                                                  this_.trigger('filter_change');
                                                              }
                                                          }
@@ -85,10 +100,18 @@ require(
                                  var b = new FilterButtonView({
                                                                   label:tag,
                                                                   toggle:function(on) {
-                                                                      console.log('toggle tag ', tag, on); 
                                                                       on ? shv.getStreamView().add_filter(m) : shv.getStreamView().remove_filter(m);
-                                                                      console.log("number of visible items, ", shv.getStreamView().getNumberofVisibleItems());
+                                                                      if (this_.options.mutually_exclusive_filters && this_._tag_filter) {
+                                                                          shv.getStreamView().remove_filter(this_._tag_filter);
+                                                                          b.$el.parent().find('.filter_button').filter(
+                                                                              function() {  return this !== b.el; }).map(
+                                                                                  function() {
+                                                                                      $(this).data('view').set_unselected();
+                                                                                  });
+                                                                      }
+                                                                      if (this_.options.mutually_exclusive_filters) { this_._tag_filter = m; };                                                     
                                                                       this_.trigger('filter_change');
+                                                                      
                                                                   }
                                                               });
                                  filters.append(b.render());                                                             
@@ -129,7 +152,8 @@ require(
                                                 rows.map(function(x) { x.id = i++; });
                                                 var main = new MainView({
                                                                             el:$("#main")[0],
-                                                                            data: rows
+                                                                            data: rows,
+                                                                            mutually_exclusive_filters:true
                                                                         });
                                                 main.render();                                                
                                             });
