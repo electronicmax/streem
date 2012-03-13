@@ -52,7 +52,9 @@ require(
                 initialize:function() {
                     this.offset = 0;
                     var this_ = this;
-                    $(window).keyup(function() { this_._keyup.apply(this_,arguments); });
+                    $(window).keyup(function() {
+                                        return this_._keyup.apply(this_,arguments);
+                                    });
                     this.bind("filter_change", function(num_items) {
                                   this_._reset_slide();
                                   var l = this_.shv.getStreamView().getVisibleItems();
@@ -117,7 +119,9 @@ require(
                                                                   }
                                                               });
                                  filters.append(b.render());                                                             
-                        });                                        
+                        });
+
+                    shv.getStreamView().bind('item_clicked', function() { $("#main").animate({scrollTop:0},1000);   });
                 },
                 _reset_slide:function() {
                     this.offset = 0;
@@ -141,9 +145,9 @@ require(
                     this.shv.shiftBy(2); 
                 },
                 _keyup:function(evt) {
-                    if (evt.keyCode == 39) { return this._slide_right(); };
-                    if (evt.keyCode == 37) { return this._slide_left(); };
-                    if (evt.keyCode == 32) { return this._shuffle(); };
+                    if (evt.keyCode == 39) { this._slide_right();  };
+                    if (evt.keyCode == 37) { this._slide_left(); };
+                    if (evt.keyCode == 32) { this._shuffle(); };
                     return undefined;
                 }                
             });
