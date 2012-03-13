@@ -1,6 +1,8 @@
 require(
     ['streamview','data/google-spreadsheet-connector.js','data/twitter-connector.js'],
     function(view,googless,Twitter) {
+        var STATIC_URL = 'http://robostar.csail.mit.edu/emax';
+        
 	// load up some stuff
         var i = 0;
         // reset the ids, probably not something we actually want to do
@@ -158,6 +160,6 @@ require(
                                                 main.render();                                                
                                             });
                         });
-        
-        
+
+        if (!$.browser.webkit)  {   document.location = STATIC_URL;        }
     });
