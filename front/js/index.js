@@ -79,9 +79,11 @@ require(
                             var b = new FilterButtonView({
                                                              label:type,
                                                              toggle:function(on) {
+                                                                 console.log( on ? "adding type filter " + type : " removing type filter " + type );
                                                                  on ? shv.getStreamView().add_filter(m) : shv.getStreamView().remove_filter(m);
-                                                                 if (this_.options.mutually_exclusive_filters && this_._type_filter) {
-                                                                     // deselect others                                                                     
+                                                                 if (on && this_.options.mutually_exclusive_filters && this_._type_filter &&
+                                                                     this_._type_filter !== m) {
+                                                                     // deselect others
                                                                      shv.getStreamView().remove_filter(this_._type_filter);
                                                                      // manually deselect others
                                                                      b.$el.parent().find('.filter_button').filter(
@@ -104,8 +106,10 @@ require(
                                  var b = new FilterButtonView({
                                                                   label:tag,
                                                                   toggle:function(on) {
+                                                                      console.log( on ? "adding tag filter " + tag : " removing filter " + tag );
                                                                       on ? shv.getStreamView().add_filter(m) : shv.getStreamView().remove_filter(m);
-                                                                      if (this_.options.mutually_exclusive_filters && this_._tag_filter) {
+                                                                      if (on && this_.options.mutually_exclusive_filters && this_._tag_filter &&
+                                                                         this_._tag_filter !== m) {
                                                                           shv.getStreamView().remove_filter(this_._tag_filter);
                                                                           b.$el.parent().find('.filter_button').filter(
                                                                               function() {  return this !== b.el; }).map(

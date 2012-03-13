@@ -99,6 +99,8 @@ header h1 { font-size:14pt; margin:0px; padding:0px; }
 .selected .when {
     font-size:8pt;
 }
+
+
 .stream .importance-1 {
     width:320px !important; height:320px !important;
 }
@@ -115,14 +117,24 @@ header h1 { font-size:14pt; margin:0px; padding:0px; }
 .paper {  background-color:rgba(240,225,255,0.2); }
 .project {  background-color:rgba(250,230,255,0.2); }
 /*.blog {  background-color:rgba(25,225,205,0.2); }*/
-/*.stream .tweet { background-color:rgba(100,240,255,0.3) !important; color:black;  }*/
-
+.tweet {
+    background-color: rgba(64, 144, 255, 0.2) !important; text-weight:bold;
+}
+.stream .tweet {   }
+.selected.tweet .title {
+    display:none;
+}
+.selected.tweet .abstract {
+    font-size:140%;
+    font-weight:1000;
+}
+.stream .tweet { font-size:90%; padding: 10px; font-weight:bold; }
 .article {
     position: relative;    
     font-size:16pt;
     overflow:hidden;
     margin:5px;
-    padding:20px;
+    padding:15px;
     border:1px solid rgba(0,0,0,0.4);
     height:140px;
     width:140px;    

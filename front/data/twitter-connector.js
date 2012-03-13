@@ -27,7 +27,7 @@ define([],
                                     posted: x.created_at,
                                     link1: "https://twitter.com/#!/"+this_.userid+"/status/"+x.id_str,
                                     link1_label:"see original tweet",
-                                    "title": x.text.slice(0,30).concat("..."),
+                                    "title": x.text.slice(0,50).concat("..."),
                                     "abstract":x.text
                                 };
                             });                        
