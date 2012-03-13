@@ -37,7 +37,7 @@ header h1 { font-size:14pt; margin:0px; padding:0px; }
     top:36px; left:0px;
     right:0px;
     bottom:0px;
-    overflow-x:hidden;
+    overflow:hidden;
 }
 .lhs {
     padding:30px; position:absolute;
