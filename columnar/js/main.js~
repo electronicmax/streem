@@ -1,0 +1,7 @@
+
+
+// controllers and such 
+
+function MainController($scope) {
+	
+}

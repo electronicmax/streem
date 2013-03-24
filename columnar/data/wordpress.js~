@@ -1,0 +1,9 @@
+
+var WORDPRESS_URL = "http://thefutureispersonal.wodpress.com/feed/atom"+this.count;
+var get_entries  = function() {
+	// returns a deferred
+	var convert = function() {
+		
+	};
+    $.ajax({url: WORDPRESS_URL, dataType:"xml"}).pipe(function(x) { return this_.convert(x); });
+};
