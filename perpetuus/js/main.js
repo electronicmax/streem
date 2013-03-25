@@ -8,9 +8,9 @@ function MainController($scope) {
 		[
 			'img/back/32.jpg',
 			'img/back/6564176627_cd3ca796a0_o.jpg',
-			'img/back/bridge.jpg',
+			// 'img/back/bridge.jpg',
 			// 'img/back/broad.jpg',
-			'img/back/dome-night.jpg',
+			// 'img/back/dome-night.jpg',
 			// 'img/back/dsc00117hp8.jpg',
 			'img/back/img1.jpg',
 			'img/back/img2.jpg',
