@@ -38,5 +38,5 @@ function MainController($scope) {
 		$($('.backdrop_image')[next]).addClass('selected');
 		$($('.backdrop_image')[i]).removeClass('selected');
 		i = next;
-	}, 3000);
+	}, 5000);
 }
