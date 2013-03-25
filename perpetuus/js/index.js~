@@ -1,0 +1,5 @@
+require(['/data/streams', '/js/streamview.js'],
+	function() {
+	    // load up some stuff
+	    
+	});

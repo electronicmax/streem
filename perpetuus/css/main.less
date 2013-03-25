@@ -1,0 +1,79 @@
+
+// main stuff here
+
+* {
+	box-sizing:border-box;
+}
+
+body {
+	background-color:black !important;
+}
+@font-face {
+	font-family: 'Roundy';
+	src: url('../fonts/PoiretOne-Regular.ttf');
+}
+@font-face {
+	font-family: 'Simonetta';
+	src: url('../fonts/Simonetta-Regular.ttf');
+}
+
+@height: -60px;
+
+.titleblock {
+	position:fixed;	
+	background:rgba(0,0,0,0.52);	
+	left:0px; right:0px; top:50%; bottom:50%;
+	margin: -49px 0 -40px 0px;
+	padding:5px 0 0 0px;
+	.title {
+		font-family:'Roundy';		
+		color:white;
+		text-align:center;
+		font-size:144pt;
+		vertical-align:middle;
+	}
+}
+.halfblock {
+	font-family:'Roundy';
+	font-size:16pt;
+	padding: 2px 0px 0px 140px;
+	background:rgba(0,0,0,0.40); //  @opac);		
+	color:white;
+	position:fixed;	
+	left:0px; right:0px; top:50%; bottom:0%;
+	margin: 40px 0 0 0;
+	text-align:center;	
+	.tagline {
+
+	}
+}
+
+.backdrop_image {
+   -webkit-background-size: cover !important;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   opacity:0;
+   position:fixed;
+   top:0px; bottom:0px; right:0px; left:0px;
+   &.selected {
+	   opacity:1.0;
+   }
+   -webkit-transition: opacity 1s ease-in-out;
+}
+
+ul {
+  list-style-type:none;
+}
+
+.blog {
+  color:white;
+  background:rgba(0,0,0,0.8);
+  position:absolute;
+  width:500px;
+  right: 20%;
+  .title { font-size:140%; }
+  margin:20px;
+  padding:40px;
+}
+

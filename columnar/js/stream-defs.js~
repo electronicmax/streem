@@ -1,5 +1,0 @@
-define([],
-	function(defs) {
-	    // load up some stuff
-	    
-	});

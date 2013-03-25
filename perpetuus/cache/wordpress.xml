@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+  xml:base="http://thefutureispersonal.wordpress.com/wp-atom.php"
+  xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"  >
+	<title type="text">the future is personal</title>
+	<subtitle type="text">@emax&#039;s blog about personal data technologies and future-proofing the web for humanity</subtitle>
+
+	<updated>2013-03-22T00:58:26Z</updated>
+
+	<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com" />
+	<id>http://thefutureispersonal.wordpress.com/feed/atom/</id>
+	<link rel="self" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/feed/atom/" />
+
+	<generator uri="http://wordpress.com/">WordPress.com</generator>
+<link rel="search" type="application/opensearchdescription+xml" href="http://thefutureispersonal.wordpress.com/osd.xml" title="the future is personal" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com" />
+	<link rel='hub' href='http://thefutureispersonal.wordpress.com/?pushpress=hub' />
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[A Walk in the Park: What&#8217;s a Digital Public Space?]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/21/a-walk-in-the-park-digital-public-spaces/" />
+		<id>http://thefutureispersonal.wordpress.com/2013/03/21/a-walk-in-the-park-digital-public-spaces/</id>
+		<updated>2013-03-21T21:17:08Z</updated>
+		<published>2013-03-21T20:55:09Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="microthoughts" /><category scheme="http://thefutureispersonal.wordpress.com" term="physical-digital interaction" /><category scheme="http://thefutureispersonal.wordpress.com" term="privacy" /><category scheme="http://thefutureispersonal.wordpress.com" term="public space" /><category scheme="http://thefutureispersonal.wordpress.com" term="social machines" /><category scheme="http://thefutureispersonal.wordpress.com" term="personal data" />		<summary type="html"><![CDATA[Public parks serve several important roles for inhabitants of urban spaces. While granting city dwellers a respite from their private, work and home settings, they provide a rare opportunity for <a class="more" href="http://thefutureispersonal.wordpress.com/2013/03/21/a-walk-in-the-park-digital-public-spaces/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=102&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2013/03/21/a-walk-in-the-park-digital-public-spaces/"><![CDATA[<p dir="ltr"><a href="http://thefutureispersonal.files.wordpress.com/2013/03/seurat1.jpg"><img class="wp-image-104 alignnone" alt="seurat1" src="http://thefutureispersonal.files.wordpress.com/2013/03/seurat1.jpg?w=300&#038;h=196" width="300" height="196" /></a></p>
+<p dir="ltr">Public parks serve several important roles for inhabitants of urban spaces. While granting city dwellers a respite from their private, work and home settings, they provide a rare opportunity for the paths of peoples’ otherwise highly partitioned lives to intersect and mix in a pleasant, complementary, rather than competitive, manner.  In effect, public commons like parks provide a preciously rare setting for spawning spontaneous serendipitous exchanges of information, sociality, and mutual awareness.</p>
+<p dir="ltr">Indeed, for centuries, city and town planners have used parks as a &#8220;not-so-secret weapon&#8221; in making cities livable and pleasant, to galvanize culture and community where previously was none.  James Howard Kunstler described successful public spaces as &#8220;inspired centers of civic life and the physical manifestation of the common good&#8221;.  Simply put, parks and other pleasant public spaces make life better for everyone in a multitude of different ways.</p>
+<p dir="ltr">While digital space and physical space have many dissimilarites, the affordance of letting people share and meet serendipitously and spontaneously has been shown to be core to fostering community and social awareness in both.  Although “Web 2.0” has ushered a great many examples of online spaces where people who may otherwise not know each other may meet and interact directly or indirectly, these “public spaces” of the Web today are not public at all, but only somehwat curated by their participants, under the centralized control of their providers, be them Facebook, Tumblr, Twitter or countless others.  These services transparently (or in some cases, overtly) modulate the interactions that take place in these spaces often to benefit the service provider’s own purposes.</p>
+<p dir="ltr">For example, instead of seeing all of the information created by an individual’s friends on Facebook, the Facebook platform carefully selects the timing and visibility of such posts on an individual’s aggregated News Feed, interspersing relevant adverts and sponsored links in its re-curation.  Thus each individual’s experience on the site is decoupled from the actions of its constituent community.   If this happened in the real world, it would be as if an external agency could control and filter which people one might see walking in a public space, and selectively filtering what you could hear them saying.  This would undoubtedly be seen as a violation of the “communal” aspects of a true public space, which is maintained and governed democratically by the community it serves. Nonetheless, the power of serendipity afforded by shared space drives community to continue participating; people continue to “Facebook” each other, “Tweet” addictively and “Tumble”  regardless of the limitations these systems impose.</p>
+<p dir="ltr">The development and vision of Personal Data Stores (PDSes), however, may represent a pivotal turning point for interactions on the Web.  The simple idea of PDSes is that, like the physical goods and possessions people keep in their private spaces, individuals are able to fully control the data that is theirs, including the ways it is stored, used, and shared with others.  In such a setting, people can control the ways that their data can be disclosed, shared and mixed with others’; therefore, PDSes can be seen as a building block for a new type of democratised digital public space governed by its participants.</p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/102/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/102/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=102&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/21/a-walk-in-the-park-digital-public-spaces/#comments" thr:count="1"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2013/03/21/a-walk-in-the-park-digital-public-spaces/feed/atom/" thr:count="1"/>
+		<thr:total>1</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[People hate social login]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/20/people-hate-social-login/" />
+		<id>http://thefutureispersonal.wordpress.com/?p=72</id>
+		<updated>2013-03-21T21:03:08Z</updated>
+		<published>2013-03-20T21:55:47Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="privacy" /><category scheme="http://thefutureispersonal.wordpress.com" term="social machines" /><category scheme="http://thefutureispersonal.wordpress.com" term="identity services" />		<summary type="html"><![CDATA[A great short post from the Mozilla Identity Blog reports that people generally do not like using Twitter and Facebook as identity services, and generally hate it when they are <a class="more" href="http://thefutureispersonal.wordpress.com/2013/03/20/people-hate-social-login/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=72&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2013/03/20/people-hate-social-login/"><![CDATA[<p><a href="http://thefutureispersonal.files.wordpress.com/2013/03/sign-in-with-facebook-twitter-buttons1.jpg"><img class="wp-image-108 alignnone" alt="Sign-in-With-Facebook-Twitter-Buttons1" src="http://thefutureispersonal.files.wordpress.com/2013/03/sign-in-with-facebook-twitter-buttons1.jpg?w=300&#038;h=169" width="300" height="169" /></a></p>
+<p>A great short post from the Mozilla Identity Blog reports that people generally do not like using Twitter and Facebook as identity services, and generally hate it when they are _forced_ to do so.</p>
+<p>The interesting thing about this is that behavioural economics and privacy studies would predict that people would like these for reasons of 1) convenience 2) lack of privacy concerns.</p>
+<p>However, the increased salience of the risks to personal information being made by popular news and media outlets may be helping to raise people&#8217;s sensitivity to the potential issues of granting 3rd parties access to their main social network profiles. The question we don&#8217;t know the answer to is whether this represents a shift in attitudes or literacy.</p>
+<p>Users don&#8217;t like social login, from mozilla</p>
+<p><a href="http://identity.mozilla.com/post/45842909320/users-dont-like-social-login" rel="nofollow">http://identity.mozilla.com/post/45842909320/users-dont-like-social-login</a></p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/72/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/72/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=72&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/20/people-hate-social-login/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2013/03/20/people-hate-social-login/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[Using Sociometric Sensors to Optimise the Workplace]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/08/using-sociometric-sensors-to-optimise-the-workplace/" />
+		<id>http://thefutureispersonal.wordpress.com/?p=97</id>
+		<updated>2013-03-08T01:19:54Z</updated>
+		<published>2013-03-08T01:19:54Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="physical-digital interaction" /><category scheme="http://thefutureispersonal.wordpress.com" term="social machines" /><category scheme="http://thefutureispersonal.wordpress.com" term="social technology" />		<summary type="html"><![CDATA[Absolutely fascinating piece about how wearable activity sensors are being used by large corporations to understand how workers collaborate and ways to allow them to become more productive. Unsurprisingly, MIT <a class="more" href="http://thefutureispersonal.wordpress.com/2013/03/08/using-sociometric-sensors-to-optimise-the-workplace/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=97&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2013/03/08/using-sociometric-sensors-to-optimise-the-workplace/"><![CDATA[<p>Absolutely fascinating piece about how wearable activity sensors are being used by large corporations to understand how workers collaborate and ways to allow them to become more productive. Unsurprisingly, MIT Media Lab spinoff technology is in use, as much of the earlier sociometer work comes straight out of Sandy Pentland&#8217;s group&#8217;s portfolio.</p>
+<p>The metrics measured do not include worker happiness though &#8211; which makes it seem rather dystopian.  Productivity is not a proxy metric for happiness &#8211; in fact it may be an inverse-correlate.  Will optimising for productivity in the short term be good for people in the long term? Do companies even care?</p>
+<p><a href="http://online.wsj.com/article/SB10001424127887324034804578344303429080678.html?mod=WSJ_MostPopular_Europe" rel="nofollow">http://online.wsj.com/article/SB10001424127887324034804578344303429080678.html?mod=WSJ_MostPopular_Europe</a></p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/97/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/97/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=97&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/08/using-sociometric-sensors-to-optimise-the-workplace/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2013/03/08/using-sociometric-sensors-to-optimise-the-workplace/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[Can Web sites make people healthier?]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/05/can-web-sites-make-people-healthier/" />
+		<id>http://thefutureispersonal.wordpress.com/?p=92</id>
+		<updated>2013-03-05T19:40:13Z</updated>
+		<published>2013-03-05T19:39:10Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="Uncategorized" /><category scheme="http://thefutureispersonal.wordpress.com" term="health and wellbeing" /><category scheme="http://thefutureispersonal.wordpress.com" term="paper" /><category scheme="http://thefutureispersonal.wordpress.com" term="social machines" /><category scheme="http://thefutureispersonal.wordpress.com" term="web" />		<summary type="html"><![CDATA[There are a huge number of web sites, apps, and online communities dedicated to helping people live healthier lives in various ways.  Are these sites actually helping? How similar are <a class="more" href="http://thefutureispersonal.wordpress.com/2013/03/05/can-web-sites-make-people-healthier/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=92&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2013/03/05/can-web-sites-make-people-healthier/"><![CDATA[<p>There are a huge number of web sites, apps, and online communities dedicated to helping people live healthier lives in various ways.  Are these sites actually helping? How similar are they to one another?  What kinds of support do each offer?</p>
+<p>We <a href="http://blog.soton.ac.uk/sociam/2013/03/05/a-first-look-at-health-social-machines/">performed a preliminary analysis</a> of the spectrum of available online &#8220;health social machines&#8221; &#8211; web sites that use input from people to help other people &#8211; to answer these questions, and postulate ways that such sites might better support individuals&#8217; pursuits of well-being.</p>
+<p>See our writeup <a href="http://blog.soton.ac.uk/sociam/2013/03/05/a-first-look-at-health-social-machines/">here</a>.</p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/92/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/92/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=92&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/05/can-web-sites-make-people-healthier/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2013/03/05/can-web-sites-make-people-healthier/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[&#8216;Serendipity Magnets&#8217;]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/02/serendipity-magnets-and-life-trajectories/" />
+		<id>http://thefutureispersonal.wordpress.com/?p=4</id>
+		<updated>2013-03-03T00:37:02Z</updated>
+		<published>2013-03-02T15:57:36Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="microthoughts" /><category scheme="http://thefutureispersonal.wordpress.com" term="physical-digital interaction" /><category scheme="http://thefutureispersonal.wordpress.com" term="social machines" />		<summary type="html"><![CDATA[Most of the unplanned, chance encounters that we have have little overall effect on the long-term trajectories of our lives, like little bumps or cracks on the sidewalk. Others, though,may <a class="more" href="http://thefutureispersonal.wordpress.com/2013/03/02/serendipity-magnets-and-life-trajectories/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=4&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2013/03/02/serendipity-magnets-and-life-trajectories/"><![CDATA[<p>Most of the unplanned, chance encounters that we have have little overall effect on the long-term trajectories of our lives, like little bumps or cracks on the sidewalk. Others, though,may set our lives along wildly different trajectories than we had originally planned. We might encounter our future husband or wife at a random party, on the train on the way to work, or in a café for example.  Looking back, if we had missed the train, stayed home from the party, decided not to visit a museum on a whim, these significant life diversions may have never happened to us .</p>
+<p>When good random things happen to us, we tend to call it &#8216;serendipity&#8217;; when bad things befall upon us, we tend to attribute it to &#8216;bad luck&#8217;. While it is disputed whether or not we may not be able to actively control the balance between good and bad events that we experience in our random encounters, we do considerable control over how much randomness we let into our lives.</p>
+<p>The amount of randomness we admit into our lives is basically directly controlled by our behaviour, and the degree to which we embrace activities that forge new, or potentially new experiences.  When we stick to the behaviour trajectories we have preivously established &#8211; whether they be simple choices like eating foods we have tried previously, to staying in locations we frequent often, to socialising with the same group of friends we see daily, we reduce the amount of randomness and newness we are likely to experience that day..</p>
+<p>What are the long term effects of limiting or increasing randomness?  The answer to this question is uncertain; many reclusive intellectuals, like Marcel Proust, have been known to holed themselves up to isolate themselves from exposure to any &#8216;externalities&#8217;, so that they can concentrate on their private pursuits.  On the other hand, business majors are often taught to &#8216;network&#8217; with as many other people as possible, stretching their social networks wide and thin.   What is known is that people have natural thresholds on risk aversion and how much we like new experiences.  But as we grow older, we naturally drift towards aversion to risk and new experiences, at least up to a certain age.  While it is not known specifically why this happens, there may be a number of factors that contribute; first, we accumulate more experience that guides us about the kinds of things we like and dislike, and we learn, perhaps, about the great many things that we dislike.  Second, perhaps we have more to lose, in the sense of having more money, more family, and more sense of value to life that bring about a greater fear of loss resulting from the unexpected.</p>
+<p>Nicholas Negroponte once challenged us,  the first class of 20 or so undergraduates at the MIT Media Lab&#8217;s flagship MAS.100 course about &#8216;thinking digitally&#8217;, to think about &#8216;turn up the knob of serendipity&#8217;.  Unsure about what that meant, we all wandered away, most of us making knob-turning gestures with our wrists and thinking of delightful things that happen as a result.</p>
+<p>Nearly 15 years later, I realise that just as there are &#8216;channel factors&#8217; psychologist Ross and Nisbett discovered that so dramatically influence people&#8217;s behaviour, there are things in the world that, amplify random happenings which, while they may not filter out the bad, may bring about a slight preference for the good.  Simple examples include the kinds of watering holes that attract people that are like you to certain places; your favourite café, record store, or place to sit in the park and think.  The mere presence of certain things &#8212; good cofffée, good WiFi, power outlets, good art, organic food, may attract or repel people that you are like and that you, in turn, like.  In an urban setting, the effect of such &#8216;serendipity magnets&#8217; are amplified manyfold, as the effects are tangibly visible; certain cafés that are packed next to empty ones, &#8216;hipster art bars&#8217; that attract a very specific clientele, and so forth.</p>
+<p>Café and record shop managers have known this for a long time. But as things have grown more digital, ephemeral serendipity magnets have become to emerge, those that only exist for a single day at a specific time, or in some cases, that exist in no single physical place at all, but across a number of places simultaneously, such as &#8217;round the world hacking parties&#8217; such as the Open Data Day that recently occurred in 20 cities worldwide.  Moreover, digital and mobile technology has begun to penetrate the physical barriers that partition serendipity, allowing people to randomly run across one another even across several streets, buildings, or even miles, with many intervening walls in between.  For this I&#8217;m referring to the many kinds of &#8220;location-based dating&#8221; apps that have emerged, perhaps the most prominent example being the gay dating app Grindr, but also to a much larger class of &#8220;place focused networking&#8221; apps like Foursquare as well, which give people awareness of where others are at a particular time.</p>
+<p>Most of these services are currently in &#8220;Version 1.0&#8243;, meaning they are rather crude, simple, and very much unlike randomly seeing someone on a train.  People have criticised the services as being creepy, useless, annoying, and perceived as &#8216;only for people looking for hookups&#8217;.    But as the ideas and successes from the first generation of these systems mature, we may start to think about ways by which we can build better channel factors that achieve the good aspects of these new digital serendipity magnets, such as allowing members of a minority population (such as single gay or lesbian individuals have an increased chance of meeting one another), while designing away the bad, annoying, attention intensive and annoying features.</p>
+<p>This is left as an exercise to the reader.</p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/4/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/4/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=4&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/03/02/serendipity-magnets-and-life-trajectories/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2013/03/02/serendipity-magnets-and-life-trajectories/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[MIT Tech Review: The Problem with our Data Obsession]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/02/25/mit-tech-review-the-problem-with-our-data-obsession/" />
+		<id>http://thefutureispersonal.wordpress.com/?p=70</id>
+		<updated>2013-02-25T20:59:26Z</updated>
+		<published>2013-02-25T20:59:26Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="Uncategorized" />		<summary type="html"><![CDATA[Brian Bergstein of the MIT Technology Review published a provocative piece called &#8220;The Problem with Our Data Obsession&#8221; about what the &#8220;techno-utopian&#8221; naive idealism open data misses, and in particular <a class="more" href="http://thefutureispersonal.wordpress.com/2013/02/25/mit-tech-review-the-problem-with-our-data-obsession/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=70&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2013/02/25/mit-tech-review-the-problem-with-our-data-obsession/"><![CDATA[<p>Brian Bergstein of the MIT Technology Review published a provocative piece called &#8220;<a href="http://www.technologyreview.com/review/511176/the-problem-with-our-data-obsession/">The Problem with Our Data Obsession</a>&#8221; about what the &#8220;techno-utopian&#8221; naive idealism open data misses, and in particular what it potentially sacrifices.  He claims</p>
+<blockquote><p>we are too often [... ] opting to publish more information to increase transparency even if it undermines principles such as privacy or civic involvement.</p></blockquote>
+<p>Surprisingly, he cites <a href="http://lessig.org">Larry Lessig</a>, who is, of course, well known to be an ardent supporter  of various kinds of open-ness, from open access to Creative Commons and beyond, as having argued that publishing data openly may have detrimental effects as well, such as during political races,  In particular, he says that having more data about politicians can risk misleading people and making people cynical rather than promoting greater civic engagement.</p>
+<p>The high order bits of this argument, I believe, is that while raw data can be revealing, the key is in its interpretation, and just as written or spoken word can be (mis-) interpreted  and (mis-) appropriated, data can be used for a large variety of purposes and intentions as well. As we achieve a greater data literacy, we can look to making such interpretability and context more obvious and deliberate, so that people can make their own independent subjective interpretation of published open data.</p>
+<p>See article: &#8220;The Problem with Our Data Obsession&#8221; - <a href="http://www.technologyreview.com/review/511176/the-problem-with-our-data-obsession/">http://www.technologyreview.com/review/511176/the-problem-with-our-data-obsession/</a></p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/70/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/70/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=70&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2013/02/25/mit-tech-review-the-problem-with-our-data-obsession/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2013/02/25/mit-tech-review-the-problem-with-our-data-obsession/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[Personal data: Know thyself &#124; The Economist]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2012/12/14/personal-data-know-thyself-the-economist/" />
+		<id>http://thefutureispersonal.wordpress.com/?p=68</id>
+		<updated>2012-12-14T13:15:11Z</updated>
+		<published>2012-12-14T13:15:11Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="data archiving" /><category scheme="http://thefutureispersonal.wordpress.com" term="personal data stores" />		<summary type="html"><![CDATA[The Economist rather briefly touches on the potentials of Personal Data Lockers and a number of slightly strange unsubstantiated &#8216;dangers&#8217;.  One of them is that users would have to &#8220;claw <a class="more" href="http://thefutureispersonal.wordpress.com/2012/12/14/personal-data-know-thyself-the-economist/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=68&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2012/12/14/personal-data-know-thyself-the-economist/"><![CDATA[<p>The Economist rather briefly touches on the potentials of Personal Data Lockers and a number of slightly strange unsubstantiated &#8216;dangers&#8217;.  One of them is that users would have to &#8220;claw at &#8221; the service providers to get their data back, which we see is not actually the case; service providers (such as Barclays, etc) seem more than happy to provide people with dumps of their data.</p>
+<p><a href="http://www.economist.com/news/business/21568438-data-lockers-promise-help-people-profit-their-personal-information-know-thyself">Personal data: Know thyself | The Economist</a>.</p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/68/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/68/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=68&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2012/12/14/personal-data-know-thyself-the-economist/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2012/12/14/personal-data-know-thyself-the-economist/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[The Web We Lost &#8211; Anil Dash]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2012/12/14/the-web-we-lost-anil-dash/" />
+		<id>http://thefutureispersonal.wordpress.com/?p=67</id>
+		<updated>2012-12-14T11:38:28Z</updated>
+		<published>2012-12-14T11:38:28Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="Uncategorized" />		<summary type="html"><![CDATA[The Web We Lost &#8211; Anil Dash.<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=67&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2012/12/14/the-web-we-lost-anil-dash/"><![CDATA[<p><a href="http://dashes.com/anil/2012/12/the-web-we-lost.html">The Web We Lost &#8211; Anil Dash</a>.</p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/67/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/67/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=67&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2012/12/14/the-web-we-lost-anil-dash/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2012/12/14/the-web-we-lost-anil-dash/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[Hamburg court holds people participating in encrypted networks responsible for traffic]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2012/11/24/hamburg-court-holds-people-participating-in-encrypted-networks-responsible-for-traffic/" />
+		<id>http://thefutureispersonal.wordpress.com/?p=65</id>
+		<updated>2012-11-24T17:43:31Z</updated>
+		<published>2012-11-24T17:43:31Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="Uncategorized" />		<summary type="html"><![CDATA[In an unprecedented ruling, a court in Hamburg, Germany ruled against a user who was participating in an encrypted file sharing network called RetroShare, charging him with copyright infringement for <a class="more" href="http://thefutureispersonal.wordpress.com/2012/11/24/hamburg-court-holds-people-participating-in-encrypted-networks-responsible-for-traffic/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=65&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2012/11/24/hamburg-court-holds-people-participating-in-encrypted-networks-responsible-for-traffic/"><![CDATA[<p>In an unprecedented ruling, a court in Hamburg, Germany ruled against a user who was participating in an encrypted file sharing network called RetroShare, charging him with copyright infringement for the encrypted content that passed through his computer he that he had no access to.</p>
+<p>This could be potentially devastating for internet freedom, as a precedent that establishes that people participating in networks like Tor could be held responsible for the content passed through their machines.</p>
+<p><a href="https://torrentfreak.com/anonymous-file-sharing-ruled-illegal-by-german-court-121123/">“Anonymous” File-Sharing Darknet Ruled Illegal by German Court | TorrentFreak</a>.</p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/65/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/65/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=65&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2012/11/24/hamburg-court-holds-people-participating-in-encrypted-networks-responsible-for-traffic/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2012/11/24/hamburg-court-holds-people-participating-in-encrypted-networks-responsible-for-traffic/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+		<entry>
+		<author>
+			<name>electronicmax</name>
+						<uri>http://thefutureispersonal.wordpress.com</uri>
+					</author>
+		<title type="html"><![CDATA[Amazon wipes customer&#8217;s e-book collection with no explanation]]></title>
+		<link rel="alternate" type="text/html" href="http://thefutureispersonal.wordpress.com/2012/11/23/amazon-wipes-customers-e-book-collection-with-no-explanation/" />
+		<id>http://thefutureispersonal.wordpress.com/?p=63</id>
+		<updated>2012-11-23T15:06:54Z</updated>
+		<published>2012-11-23T15:06:54Z</published>
+		<category scheme="http://thefutureispersonal.wordpress.com" term="Uncategorized" />		<summary type="html"><![CDATA[Yet another example of the control that cloud providers have over their users. We must ask: Is this a technology that is future proof?   Or will users be directly <a class="more" href="http://thefutureispersonal.wordpress.com/2012/11/23/amazon-wipes-customers-e-book-collection-with-no-explanation/">Continue reading <span class="meta-nav">&#8594;</span></a><img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=63&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></summary>
+		<content type="html" xml:base="http://thefutureispersonal.wordpress.com/2012/11/23/amazon-wipes-customers-e-book-collection-with-no-explanation/"><![CDATA[<p>Yet another example of the control that cloud providers have over their users.</p>
+<p>We must ask: Is this a technology that is future proof?   Or will users be directly put at risk of losing their valuable (information) possessions?</p>
+<p>via <a href="http://www.guardian.co.uk/money/2012/oct/22/amazon-wipes-customers-kindle-deletes-account">Amazon wipes customer&#8217;s Kindle and deletes account with no explanation | Money | guardian.co.uk</a>.</p>
+<br />  <a rel="nofollow" href="http://feeds.wordpress.com/1.0/gocomments/thefutureispersonal.wordpress.com/63/"><img alt="" border="0" src="http://feeds.wordpress.com/1.0/comments/thefutureispersonal.wordpress.com/63/" /></a> <img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=thefutureispersonal.wordpress.com&#038;blog=41686047&#038;post=63&#038;subd=thefutureispersonal&#038;ref=&#038;feed=1" width="1" height="1" />]]></content>
+		<link rel="replies" type="text/html" href="http://thefutureispersonal.wordpress.com/2012/11/23/amazon-wipes-customers-e-book-collection-with-no-explanation/#comments" thr:count="0"/>
+		<link rel="replies" type="application/atom+xml" href="http://thefutureispersonal.wordpress.com/2012/11/23/amazon-wipes-customers-e-book-collection-with-no-explanation/feed/atom/" thr:count="0"/>
+		<thr:total>0</thr:total>
+	</entry>
+	</feed>

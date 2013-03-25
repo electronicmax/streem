@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>electronic Max</title>
+  <link rel="stylesheet/less" type="text/css" href="css/main.less" />
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css" />
+  <meta name="description" content="electronic Max (Max Van Kleek)'s homepage">  
+</head>
+<body ng-app>
+  <div class="container">
+	<div ng-controller="MainController">
+	  <div ng-repeat="i in imgs" class="backdrop_image" style="background: url({{i}}) no-repeat center center fixed;">&nbsp;</div>
+	  <div class="titleblock">
+		<div class="title">perpetuus</div>
+	  </div>
+	  <div class="halfblock">
+		keep your data safe - for generations.
+		<div class="container-fluid">
+		  <div class="row">
+			<div class="span12 tagline">
+
+			</div>
+		  </div>			
+	  </div>		
+	</div>	  
+  </div>
+  <!-- scripts -->
+  <script src="lib/less.min.js"></script>      
+  <script src="data/wordpress.js"></script>  
+  <!--<script src="data/twitter-connector.js"></script>-->
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/angular.min.js"></script>  
+  <script src="lib/underscore.js"></script>					        
+  <script src="lib/backbone.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
